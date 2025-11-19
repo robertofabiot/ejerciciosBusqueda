@@ -73,6 +73,15 @@ namespace Ejercicio1.Ejercicios
             return "no";
 
         }
+        private bool AllDisabled()
+        {
+            bool allDisabled = true;
+            foreach(Label labelActual in labelsNumerosBinaria)
+            {
+                if (labelActual.Enabled == true) allDisabled = false;
+            }
+            return allDisabled;
+        }
         private async void btnBuscar_Click(object sender, EventArgs e)
         {
             //Paso 0: Obtener número
@@ -159,10 +168,14 @@ namespace Ejercicio1.Ejercicios
                         {
                             labelsNumerosBinaria[i].ForeColor = colorDefecto;
                             labelsNumerosBinaria[i].Enabled = false;
-                            
                         }
                         i_menor = i_media++;
                         await Task.Delay(2000);
+                    }
+                    if(AllDisabled())
+                    {
+                        lblExiste.Text = "No encontrado";
+                        return;
                     }
                 }
             }

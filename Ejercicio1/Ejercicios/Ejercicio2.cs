@@ -79,6 +79,7 @@ namespace Ejercicio1.Ejercicios
             string numero = AsignarNumero();
             if (numero == "no")
             {
+                tbNumeroBuscado.Text = null;
                 return;
             }
             else
@@ -103,8 +104,12 @@ namespace Ejercicio1.Ejercicios
                 //Paso 3: Empezar búsqueda
                 while (true)
                 {
+                    foreach (Label labelActual in labelsNumerosBinaria)
+                    {
+                        labelActual.ForeColor = colorDefecto;
+                    }
                     int i_media = Convert.ToInt32(Math.Truncate(Convert.ToDouble((i_menor + i_mayor) / 2)));
-                    MessageBox.Show($"i menor: {i_menor}, i mayor: {i_mayor}, i media: {i_media}, numero: {numero}");
+
                     //Visuales para el usuario
                     lblExiste.Text = $"Evaluar si {numerosRandom[i_media]} es igual a {numero}";
                     labelsNumerosBinaria[i_media].ForeColor = colorRecorrido;
@@ -134,8 +139,6 @@ namespace Ejercicio1.Ejercicios
                     if (numerosRandom[i_media] > Convert.ToInt32(numero))
                     {
                         lblExiste.Text = $"Sí lo es. Descartando segunda mitad.";
-                        //Interno
-                        i_mayor = i_media--;
 
                         //Visual
                         for (int i = i_media; i < i_mayor; i++)
@@ -143,21 +146,22 @@ namespace Ejercicio1.Ejercicios
                             labelsNumerosBinaria[i].ForeColor = colorDefecto;
                             labelsNumerosBinaria[i].Enabled = false;
                         }
+                        //Interno
+                        i_mayor = i_media--;
                         await Task.Delay(2000);
                     }
                     else
                     {
                         lblExiste.Text = $"No lo es. Descartando primera mitad.";
-                        i_menor = i_media++;
 
                         //Visual
-                        foreach (Label labelActual in labelsNumerosBinaria)
+                        for (int i = i_media; i >= i_menor; i--)
                         {
-                            if (Convert.ToInt32(labelActual.Text) < Convert.ToInt32(numero))
-                            {
-                                labelActual.Enabled = false;
-                            }
+                            labelsNumerosBinaria[i].ForeColor = colorDefecto;
+                            labelsNumerosBinaria[i].Enabled = false;
+                            
                         }
+                        i_menor = i_media++;
                         await Task.Delay(2000);
                     }
                 }

@@ -107,8 +107,6 @@ namespace Ejercicio1.Ejercicios
                 Color colorRecorrido = Color.Blue;
                 Color colorDefecto = lblNumeros0.ForeColor;
                 Color colorEncontrado = Color.Green;
-                List<Label> correctos = new List<Label>();
-                List<Label> incorrectos = new List<Label>();
 
                 //Paso 3: Empezar búsqueda
                 while (true)
@@ -168,6 +166,10 @@ namespace Ejercicio1.Ejercicios
                         {
                             labelsNumerosBinaria[i].ForeColor = colorDefecto;
                             labelsNumerosBinaria[i].Enabled = false;
+                            foreach (Label labelActual in labelsNumerosBinaria)
+                            {
+                                labelActual.ForeColor = colorDefecto;
+                            }
                         }
                         i_menor = i_media++;
                         await Task.Delay(2000);

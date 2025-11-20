@@ -27,5 +27,10 @@ namespace Ejercicio1
         {
             new Ejercicio2().ShowDialog();
         }
+
+        private void btnEjercicio3_Click(object sender, EventArgs e)
+        {
+            new Ejercicio3().ShowDialog();
+        }
     }
 }

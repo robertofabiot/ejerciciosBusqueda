@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.btnEjercicio1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnEjercicio2 = new System.Windows.Forms.Button();
+            this.btnEjercicio3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEjercicio1
@@ -43,16 +44,27 @@
             this.btnEjercicio1.UseVisualStyleBackColor = false;
             this.btnEjercicio1.Click += new System.EventHandler(this.btnEjercicio1_Click);
             // 
-            // button2
+            // btnEjercicio2
             // 
-            this.button2.BackColor = System.Drawing.Color.LightCyan;
-            this.button2.Location = new System.Drawing.Point(283, 71);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 64);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Ejercicio 2 -  Búsqueda Binaria";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnEjercicio2.BackColor = System.Drawing.Color.LightCyan;
+            this.btnEjercicio2.Location = new System.Drawing.Point(283, 71);
+            this.btnEjercicio2.Name = "btnEjercicio2";
+            this.btnEjercicio2.Size = new System.Drawing.Size(211, 64);
+            this.btnEjercicio2.TabIndex = 1;
+            this.btnEjercicio2.Text = "Ejercicio 2 -  Búsqueda Binaria";
+            this.btnEjercicio2.UseVisualStyleBackColor = false;
+            this.btnEjercicio2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnEjercicio3
+            // 
+            this.btnEjercicio3.BackColor = System.Drawing.Color.LightCyan;
+            this.btnEjercicio3.Location = new System.Drawing.Point(539, 71);
+            this.btnEjercicio3.Name = "btnEjercicio3";
+            this.btnEjercicio3.Size = new System.Drawing.Size(211, 64);
+            this.btnEjercicio3.TabIndex = 2;
+            this.btnEjercicio3.Text = "Ejercicio 3 -  Búsqueda de Texto";
+            this.btnEjercicio3.UseVisualStyleBackColor = false;
+            this.btnEjercicio3.Click += new System.EventHandler(this.btnEjercicio3_Click);
             // 
             // Index
             // 
@@ -60,7 +72,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnEjercicio3);
+            this.Controls.Add(this.btnEjercicio2);
             this.Controls.Add(this.btnEjercicio1);
             this.Name = "Index";
             this.Text = "Index";
@@ -71,6 +84,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnEjercicio1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEjercicio2;
+        private System.Windows.Forms.Button btnEjercicio3;
     }
 }

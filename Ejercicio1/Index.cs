@@ -23,7 +23,7 @@ namespace Ejercicio1
             new Ejercicio1().ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnEjercicio2_Click(object sender, EventArgs e)
         {
             new Ejercicio2().ShowDialog();
         }
@@ -33,9 +33,19 @@ namespace Ejercicio1
             new Ejercicio3().ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnEjercicio4_Click(object sender, EventArgs e)
         {
             new Ejercicio4().ShowDialog();
+        }
+
+        private void btnEjercicio5_Click(object sender, EventArgs e)
+        {
+            new Ejercicio5().ShowDialog();
+        }
+
+        private void btnEjercicio6_Click(object sender, EventArgs e)
+        {
+            new Ejercicio6().ShowDialog();
         }
     }
 }

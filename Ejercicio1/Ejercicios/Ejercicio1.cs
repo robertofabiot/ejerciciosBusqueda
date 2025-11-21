@@ -39,7 +39,7 @@ namespace Ejercicio1
             Random random = new Random();
             foreach (Label labelActual in labelsNumeros)
             {
-                int randomInRange = random.Next(1, 101);
+                int randomInRange = random.Next(1, 100);
                 labelActual.Text = Convert.ToString(randomInRange);
             }
         }
@@ -48,7 +48,7 @@ namespace Ejercicio1
             try
             {
                 int numeroBuscado = Convert.ToInt32(tbNumeroBuscado.Text);
-                if (!(numeroBuscado > 0 || numeroBuscado < 101))
+                if (!(numeroBuscado > 0 || numeroBuscado < 100))
                 {
                     throw new FormatException();
                 }
@@ -56,7 +56,7 @@ namespace Ejercicio1
             }
             catch (FormatException)
             {
-                MessageBox.Show("El número debe ser entre 1 y 100", "Error del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El número debe ser entre 1 y 99", "Error del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return "no";
             

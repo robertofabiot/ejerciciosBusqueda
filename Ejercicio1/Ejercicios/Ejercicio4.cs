@@ -43,6 +43,7 @@ namespace Ejercicio1.Ejercicios
             dgvEstudiantes.DataSource = new List<Estudiante>(estudiantes);
             dgvEstudiantes.DefaultCellStyle.SelectionBackColor = dgvEstudiantes.DefaultCellStyle.BackColor;
             dgvEstudiantes.DefaultCellStyle.SelectionForeColor = dgvEstudiantes.DefaultCellStyle.ForeColor;
+            this.colorDefecto = dgvEstudiantes.DefaultCellStyle.ForeColor;
         }
 
         private async void btnBuscarIDLineal_Click(object sender, EventArgs e)
